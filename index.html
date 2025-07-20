@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>ihadVie - gun.lol style</title>
+  <title>ihadVie - Profile</title>
   <style>
     body {
       margin: 0; padding: 0;
       height: 100vh;
-      background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') no-repeat center center fixed;
+      background: url('https://drive.google.com/uc?export=download&id=1niujfmEIbUIB-d5umie4exf-N_IjS5wI') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Courier New', monospace;
       color: #0ff;
@@ -55,11 +55,13 @@
   </style>
 </head>
 <body>
+  <!-- Thay USER_ID và AVATAR_HASH của bạn -->
   <img class="avatar" src="https://cdn.discordapp.com/avatars/1128118850261626962/" alt="Avatar" />
   <h1>@ihadVie#1234</h1>
   <div class="tagline">Welcome to my profile</div>
 
   <div class="badges">
+    <!-- Thay YOUR_SERVER_ID và link Discord invite -->
     <a href="https://discord.gg/yourserver" target="_blank">
       <img src="https://img.shields.io/discord/YOUR_SERVER_ID?label=Discord&logo=discord&style=for-the-badge" alt="Discord Badge" />
     </a>
@@ -68,16 +70,22 @@
     </a>
   </div>
 
-  <div class="views" id="views">Loading views...</div>
+ <div class="views" id="views">Loading views...</div>
 
-  <script>
-    const views = Math.floor(Math.random() * 9000) + 1000;
-    document.getElementById('views').innerText = views + " views 👁️";
-  </script>
+<script>
+  const namespace = 'ihadVie'; // Tên trang của bạn
+  const key = 'homepage';      // Tên khóa (key) muốn đếm
+
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("views").innerText = data.value + " views";
+    });
+</script>
 
   <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-dubstep.mp3" type="audio/mpeg" />
+    <source src="https://drive.google.com/uc?export=download&id=1n9czzEj0_nP9Zgqo7_b1FagB1T-x3tew" type="audio/mpeg" />
+    Your browser does not support the audio element.
   </audio>
 </body>
 </html>
-
