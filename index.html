@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>ihadVie</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      margin-top: 20%;
+    }
+    h1 {
+      font-size: 3em;
+      color: cyan;
+      text-shadow: 0 0 10px cyan;
+    }
+    .links a {
+      color: #0ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .views {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>@ihadVie</h1>
+  <p>Welcome to my site</p>
+  <div class="links">
+    <a href="#">Discord</a>
+    <a href="#">YouTube</a>
+  </div>
+  <div class="views" id="views">Loading views...</div>
+  <script>
+    const views = Math.floor(Math.random() * 9000) + 1000;
+    document.getElementById('views').innerText = views + " views 👁️";
+  </script>
+</body>
+</html>
