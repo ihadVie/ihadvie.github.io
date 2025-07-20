@@ -1,44 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ihadVie</title>
+  <title>ihadVie - gun.lol style</title>
   <style>
     body {
-      background: black;
-      color: white;
-      font-family: monospace;
+      margin: 0; padding: 0;
+      height: 100vh;
+      background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Courier New', monospace;
+      color: #0ff;
       text-align: center;
-      margin-top: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .avatar {
+      border-radius: 50%;
+      border: 4px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
     }
     h1 {
-      font-size: 3em;
-      color: cyan;
-      text-shadow: 0 0 10px cyan;
+      margin: 0;
+      font-size: 3rem;
+      text-shadow: 0 0 10px #0ff;
     }
-    .links a {
-      color: #0ff;
+    .tagline {
+      margin: 5px 0 20px 0;
+      font-size: 1.2rem;
+      color: #aaf;
+    }
+    .badges a {
       margin: 0 10px;
       text-decoration: none;
+      color: #0ff;
+    }
+    .badges img {
+      vertical-align: middle;
     }
     .views {
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: gray;
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #88f;
+      text-shadow: 0 0 5px #0ff;
+    }
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>@ihadVie</h1>
-  <p>Welcome to my site</p>
-  <div class="links">
-    <a href="#">Discord</a>
-    <a href="#">YouTube</a>
+  <img class="avatar" src="https://cdn.discordapp.com/avatars/1128118850261626962/" alt="Avatar" />
+  <h1>@ihadVie#1234</h1>
+  <div class="tagline">Welcome to my profile</div>
+
+  <div class="badges">
+    <a href="https://discord.gg/yourserver" target="_blank">
+      <img src="https://img.shields.io/discord/YOUR_SERVER_ID?label=Discord&logo=discord&style=for-the-badge" alt="Discord Badge" />
+    </a>
+    <a href="https://youtube.com/@ihadVie" target="_blank">
+      <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Badge" />
+    </a>
   </div>
+
   <div class="views" id="views">Loading views...</div>
+
   <script>
     const views = Math.floor(Math.random() * 9000) + 1000;
     document.getElementById('views').innerText = views + " views 👁️";
   </script>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-dubstep.mp3" type="audio/mpeg" />
+  </audio>
 </body>
 </html>
+
